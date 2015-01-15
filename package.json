@@ -1,0 +1,50 @@
+{
+  "name": "gulp-preload-image",
+  "version": "0.0.1",
+  "description": "A gulp extension to preload images via either CSS, Javascript, or HTML manipulation.",
+  "main": "./index.js",
+  "proxy": null,
+  "https-proxy": null,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Xalior/gulp-preload-image.git"
+  },
+  "keywords": [
+    "image",
+    "preload",
+    "css", 
+    "javascript",
+    "html",
+    "gulpplugin",
+    "eventstream"
+  ],
+  "author": {
+      "name": "Darran D. Rimron-Soutter",
+      "email": "darran@xalior.com",
+      "url": "http://github.com/Xalior"
+  },
+  "contributors": [
+    {
+      "name": "Waterside Development",
+      "url": "http://github.com/watersidedevelopment"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xalior/gulp-preload-image/issues"
+  },
+  "dependencies": {
+    "event-stream": "*",
+    "gulp-util": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}
