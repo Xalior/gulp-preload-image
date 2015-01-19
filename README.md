@@ -41,7 +41,6 @@ gulp.task('images', ['clean'], function() {
   return gulp.src(paths.images)
     // Pass in options to the task
     .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(preload('build/style/appStyles.css', {'position': 'end', 'append': true}))
-    .pipe(gulp.dest('build/img'));
+    .pipe(preload('build/style/appStyles.css'))
 });
 ```

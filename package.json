@@ -18,16 +18,16 @@
   "keywords": [
     "image",
     "preload",
-    "css", 
+    "css",
     "javascript",
     "html",
     "gulpplugin",
     "eventstream"
   ],
   "author": {
-      "name": "Darran D. Rimron-Soutter",
-      "email": "darran@xalior.com",
-      "url": "http://github.com/Xalior"
+    "name": "Darran D. Rimron-Soutter",
+    "email": "darran@xalior.com",
+    "url": "http://github.com/Xalior"
   },
   "contributors": [
     {
@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "tmp": "0.0.24"
   }
 }
