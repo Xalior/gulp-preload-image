@@ -21,11 +21,12 @@ var preloadPlugin = function (destination, opt) {
 
         this.emit('data', file)
     }, function end(){
+        console.log(opt);
         _preloader = _preloader + "; display: none;}";
         if (opt.append) {
-            fs.writeSync(destination, _preloader);
-        } else {
             fs.appendFileSync(destination, _preloader);
+        } else {
+            fs.writeFileSync(destination, _preloader);
         }
         this.emit('end');
     });
