@@ -12,6 +12,8 @@ require('mocha');
 
 tmp.setGracefulCleanup();
 
+var _tmp;
+
 describe('gulp-preload-image', function () {
     function getFakeFile(filePath, fileContent, fileCwd, fileBase) {
         return new gutil.File({
@@ -114,16 +116,29 @@ describe('gulp-preload-image', function () {
                 if (err) throw err;
 
                 var stream = preload(path);
+                _tmp = path;
                 stream.on('end', function () {
                     fs.readFileSync(path).toString().should.match("body:after { content: url(my/gargantuan/image.png) url(../my/other/image.png); display: none;}");
                     done();
-                    fs.unlinkSync(path);
                 });
 
                 stream.write(getFakeFile('./test/tmp/my/gargantuan/image.png'));
                 stream.write(getFakeFile('./test/my/other/image.png'));
                 stream.end();
             });
+        });
+
+        it('should append to CSS if told', function (done) {
+
+            var stream = preload(_tmp, {append: true});
+            stream.on('end', function () {
+                fs.readFileSync(_tmp).toString().should.match("body:after { content: url(my/gargantuan/image.png) url(../my/other/image.png); display: none;}body:after { content: url(../fake/image.png); display: none;}");
+                done();
+                fs.unlinkSync(_tmp);
+            });
+
+            stream.write(getFakeFile('./test/fake/image.png'));
+            stream.end();
         });
     });
 
