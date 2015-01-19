@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/Xalior/gulp-preload-image.svg)](https://gemnasium.com/Xalior/gulp-preload-image)
+
 The canonical location of this project is now [Xalior/gulp-preload-image](https://github.com/Xalior/gulp-preload-image).
 
 gulp-preload-image is a Gulp extension to add a image preloading to a project, via HTML, Javascript or CSS3 file(s) in the pipeline. [Gulp is a streaming build system](https://github.com/gulpjs/gulp) utilizing [node.js](http://nodejs.org/).
