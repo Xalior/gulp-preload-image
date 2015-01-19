@@ -21,7 +21,6 @@ var preloadPlugin = function (destination, opt) {
 
         this.emit('data', file)
     }, function end(){
-        console.log(opt);
         _preloader = _preloader + "; display: none;}";
         if (opt.append) {
             fs.appendFileSync(destination, _preloader);
