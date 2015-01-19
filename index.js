@@ -16,7 +16,7 @@ var preloadPlugin = function (destination, opt) {
 
     return es.through(function write(file) {
         _preloader = _preloader + ' url(' +
-            path.relative(destination, file.path) +
+            path.relative(path.dirname(destination), file.path) +
         ')';
 
         this.emit('data', file)
