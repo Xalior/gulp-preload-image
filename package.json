@@ -1,7 +1,7 @@
 {
   "name": "gulp-preload-image",
   "version": "0.0.1",
-  "description": "A gulp extension to preload images via either CSS, Javascript, or HTML manipulation.",
+  "description": "A gulp extension to preload images via CSS3.",
   "main": "./index.js",
   "proxy": null,
   "https-proxy": null,
@@ -9,7 +9,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "scripts": {
+      "test": "make test",
+      "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+      "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+    }
   },
   "repository": {
     "type": "git",
@@ -41,7 +45,8 @@
   },
   "dependencies": {
     "event-stream": "*",
-    "gulp-util": "*"
+    "gulp-util": "*",
+    "istanbul": "^0.3.5"
   },
   "devDependencies": {
     "mocha": "*",
