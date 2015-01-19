@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Xalior/gulp-preload-image.svg?branch=master)](https://travis-ci.org/Xalior/gulp-preload-image)
+[![Coverage Status](https://coveralls.io/repos/Xalior/gulp-preload-image/badge.svg)](https://coveralls.io/r/Xalior/gulp-preload-image)
 [![Dependency Status](https://gemnasium.com/Xalior/gulp-preload-image.svg)](https://gemnasium.com/Xalior/gulp-preload-image)
 
 The canonical location of this project is now [Xalior/gulp-preload-image](https://github.com/Xalior/gulp-preload-image).
