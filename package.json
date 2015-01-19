@@ -44,9 +44,11 @@
     "url": "https://github.com/Xalior/gulp-preload-image/issues"
   },
   "dependencies": {
+    "coveralls": "^2.11.2",
     "event-stream": "*",
     "gulp-util": "*",
-    "istanbul": "^0.3.5"
+    "istanbul": "^0.3.5",
+    "mocha-lcov-reporter": "0.0.1"
   },
   "devDependencies": {
     "mocha": "*",
